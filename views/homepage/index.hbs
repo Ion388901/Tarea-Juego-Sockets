@@ -1,0 +1,42 @@
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-12">
+      <div  style = "display: none;" id = "game-form">
+          <p id = "letter">Placeholder</p>
+          <div class="form-label-group">
+            <input name="name" type="text" id="name" class="form" placeholder="Nombre">
+            <label for="name">Name</label>
+          </div>
+
+          <div class="form-label-group">
+            <input name="character" type="text" id="character" class="form" placeholder="Character">
+            <label for="character">Character</label>
+          </div>
+          <div class="form-label-group">
+            <input name="weapon" type="text" id="weapon" class="form" placeholder="Weapon">
+            <label for="weapon">Weapon</label>
+          </div>
+
+          <a class="btn btn-lg btn-primary btn-block" href="javascript:;" onClick="sendAnswers()">Submit</a>
+        </div>
+
+      <div id = "unready">
+        <input type="button" 
+            value="Ready Up" 
+            class="btn btn-success"
+            onClick="playerReady()"></input>
+      </div>
+      <div id = "wait-to-start" style="display: none">
+        <p>Esperando a los demas jugadores y que termine la ronda anterior</p>
+      </div>
+      <input type="button" 
+            value="Send toast" 
+            class="btn btn-success"
+            onClick="numberOfPlayers()"></input>
+      <input type="button" 
+            value="Send Message" 
+            class="btn btn-success"
+            onClick="messageToServer('mensaje desde el cliente')"></input>
+    </div>
+  </div>
+</main>
